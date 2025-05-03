@@ -1,225 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Unit 1 Exercises Explanation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic" rel="stylesheet">
-<style>
-    body {
-        font-family: 'BIZ UDPGothic', sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        background-color: #fdfdfd;
-        color: #333;
-    }
-    .problem-explanation {
-        margin-bottom: 30px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h3 {
-        color: #4429A6;
-        font-size: 1.5em;
-        margin-bottom: 15px;
-    }
-    h4 {
-        color: #4429A6;
-        border-bottom: 2px solid #027368;
-        padding-bottom: 5px;
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-    ul {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-    li {
-        margin-bottom: 8px;
-        display: flex;
-        align-items: flex-start; /* Align icon with the start of the text */
-    }
-    li > span { /* Style for the custom bullet */
-        margin-right: 10px;
-        flex-shrink: 0; /* Prevent the icon from shrinking */
-        line-height: inherit; /* Match line height of the text */
-    }
-    table {
-        border-collapse: collapse;
-        width: auto;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 0.95em;
-    }
-    th, td {
-        border: 1px solid #ccc;
-        padding: 8px 12px;
-        text-align: left;
-    }
-    th {
-        background-color: #f8f8f8;
-        font-weight: bold;
-        text-align: center;
-    }
-    td {
-         text-align: center;
-    }
-    .answer-highlight {
-        background-color: #FFF9C4; /* Light yellow */
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        font-weight: bold;
-        border: 1px solid #F2CD5C; /* Yellow border */
-    }
-    .point-box {
-        background-color: #E8F5E9; /* Light green */
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 6px solid #027368; /* Teal */
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .point-box strong {
-        color: #027368; /* Teal */
-    }
-    code {
-        display: inline-block;
-        background-color: #f5f5f5;
-        padding: 5px 8px;
-        border-radius: 4px;
-        border: 1px solid #eee;
-        font-family: monospace;
-        font-size: 0.9em;
-    }
-    pre code {
-        display: block;
-        white-space: pre-wrap; /* Wrap long code lines */
-        word-wrap: break-word; /* Break long words if needed */
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Unit 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'BIZ UDPGothic', sans-serif;
+            line-height: 1.7;
+            margin: 20px;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        .problem-explanation {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-top: 5px solid #4429A6;
+        }
+        h3 {
+            color: #4429A6;
+            border-bottom: 2px solid #027368;
+            padding-bottom: 5px;
+            font-size: 1.6em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        h3 span {
+             margin-right: 10px; /* 絵文字とタイトルの間隔 */
+             font-size: 1.2em; /* 絵文字のサイズ調整 */
+        }
+        h4 {
+            color: #027368;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            position: relative; /* For marker positioning */
+            padding-left: 25px; /* Space for the marker */
+        }
+        li::before {
+            content: '👉'; /* Default marker */
+            position: absolute;
+            left: 0;
+            color: #027368; /* Marker color */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f8f8;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        td {
+            background-color: #fff;
+            text-align: center;
+        }
+        code {
+            display: inline-block;
+            background-color: #f5f5f5;
+            padding: 5px 8px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 0.95em;
+        }
+        pre code {
+            display: block; /* Ensure block display within pre */
+            padding: 15px;
+            overflow-x: auto; /* Add scroll if code is long */
+        }
+        .point-box {
+            background-color: #E8F5E9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #027368;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .point-box strong {
+            color: #027368;
+        }
+        .keyword {
+            background-color: #FFF9C4;
+            padding: 0.1em 0.4em;
+            border-radius: 3px;
+            font-weight: bold;
+            border: 1px solid #F2CD5C; /* Add a subtle border */
+        }
+        .answer-highlight {
+            background-color: #FFF9C4; /* Light yellow background */
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            border: 1px solid #F2CD5C; /* Yellow border */
+            font-weight: bold;
+            color: #D98E32; /* Orange text color */
+        }
+        .verb-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .verb-list span {
+            background-color: #e0f2f1; /* Light teal background */
+            color: #00796b; /* Darker teal text */
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-<div class="problem-explanation">
-    <h3><span style="color: #4429A6; margin-right: 5px;">🧑‍🏫</span>Unit 1 Exercise 解説メール</h3>
-    <p>こんにちは！Unit 1 のエクササイズの解説だよ。一緒に見ていこう！✨</p>
+    <div class="problem-explanation">
+        <h3><span style="color: #4429A6; margin-right: 5px;">🖼️</span>1.1 写真の内容を説明しよう！ (現在進行形)</h3>
+        <p>この問題では、写真で人々が<strong style="color: #027368;">「今していること」</strong>を説明します。与えられた動詞を使って、<strong style="color: #027368;">現在進行形 (be動詞 + 動詞のing形)</strong> の文を完成させましょう。</p>
 
-    <h4 style="color: #4429A6; border-bottom: 2px solid #027368; padding-bottom: 5px;">1.1 What's happening in the pictures? 🤔</h4>
-    <p>この問題では、絵を見て、<strong style="color: #027368;">現在進行形 (Present Continuous: am/is/are + -ing形)</strong> を使って、それぞれの人物が「今」何をしているかを説明するよ。与えられた動詞の中から正しいものを選んで、適切な形にしよう！</p>
-    <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
-        <strong><span style="color: #027368;">ポイント！</span></strong> 現在進行形は <span style="background-color: #FFF9C4; padding: 0.1em 0.4em; border-radius: 3px; font-weight: bold;">「今まさに～している」</span>という状況を表すときに使うよ。主語に合わせて be動詞 (am/is/are) を選ぶのを忘れずにね！
-    </p>
-    <ul style="list-style-type: none; padding-left: 20px;">
-        <li><span style="color: #027368;">✅</span> 1. She<span class="answer-highlight">'s taking</span> a picture. (写真を撮っている)</li>
-        <li><span style="color: #027368;">✅</span> 2. He<span class="answer-highlight">'s tying</span> a shoelace. (靴ひもを結んでいる)</li>
-        <li><span style="color: #027368;">✅</span> 3. They<span class="answer-highlight">'re crossing</span> the road. (道を渡っている)</li>
-        <li><span style="color: #027368;">✅</span> 4. He<span class="answer-highlight">'s scratching</span> his head. (頭をかいている)</li>
-        <li><span style="color: #027368;">✅</span> 5. She<span class="answer-highlight">'s hiding</span> behind a tree. (木の後ろに隠れている)</li>
-        <li><span style="color: #027368;">✅</span> 6. They<span class="answer-highlight">'re waving</span> to somebody. (誰かに手を振っている)</li>
-    </ul>
-</div>
+        <h4>📚 使える動詞リスト</h4>
+        <div class="verb-list">
+            <span>cross (渡る)</span>
+            <span>hide (隠れる)</span>
+            <span>scratch (かく)</span>
+            <span>take (撮る)</span>
+            <span>tie (結ぶ)</span>
+            <span>wave (手を振る)</span>
+        </div>
 
-<div class="problem-explanation">
-    <h4 style="color: #4429A6; border-bottom: 2px solid #027368; padding-bottom: 5px;">1.2 Sentence Matching 🧩</h4>
-    <p>ここでは、左側の文 (1-8) と、それに続くのに最も自然な右側の文 (a-h) を組み合わせるよ。文脈を考えて、意味がつながるペアを見つけよう！</p>
-    <p>💡 ヒント: 各ペアの文は、理由や状況説明になっていることが多いよ。</p>
-    <table style="border-collapse: collapse; width: auto; margin-top: 15px; margin-bottom: 15px;">
-        <thead>
-            <tr>
-                <th style="border: 1px solid #ccc; padding: 8px 12px; background-color: #f8f8f8; text-align: center; font-weight: bold;">左の文 (状況)</th>
-                <th style="border: 1px solid #ccc; padding: 8px 12px; background-color: #f8f8f8; text-align: center; font-weight: bold;">組み合わせる記号</th>
-                <th style="border: 1px solid #ccc; padding: 8px 12px; background-color: #f8f8f8; text-align: center; font-weight: bold;">右の文 (理由・説明)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">1. Please don't make so much noise.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">f</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">I'm trying to work.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">2. We need to leave soon.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">e</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">It's getting late.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">3. I don't have anywhere to live right now.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">g</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">I'm staying with friends.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">4. I need to eat something soon.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">a</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">I'm getting hungry.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">5. They don't need their car any more.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">d</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">They're trying to sell it.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">6. Things are not so good at work.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">h</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">The company is losing money.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">7. It isn't true what they say.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">b</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">They're lying.</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">8. We're going to get wet.</td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">c</span></td>
-                <td style="border: 1px solid #ccc; padding: 8px 12px;">It's starting to rain.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+        <h4>✅ 答えとポイント</h4>
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li><span style="color: #027368;">1.</span> She's <span class="answer-highlight">taking</span> a picture. (写真1: 女性がカメラで写真を<strong style="color: #027368;">撮っています</strong>)</li>
+            <li><span style="color: #027368;">2.</span> He's <span class="answer-highlight">tying</span> a shoelace. (写真2: 男性が靴ひもを<strong style="color: #027368;">結んでいます</strong>)</li>
+            <li><span style="color: #027368;">3.</span> They're <span class="answer-highlight">crossing</span> the road. (写真3: 人々が道路を<strong style="color: #027368;">渡っています</strong>)</li>
+            <li><span style="color: #027368;">4.</span> He's <span class="answer-highlight">scratching</span> his head. (写真4: 男性が頭を<strong style="color: #027368;">かいています</strong>)</li>
+            <li><span style="color: #027368;">5.</span> She's <span class="answer-highlight">hiding</span> behind a tree. (写真5: 女性が木の<strong style="color: #027368;">後ろに隠れています</strong>)</li>
+            <li><span style="color: #027368;">6.</span> They're <span class="answer-highlight">waving</span> to somebody. (写真6: 二人が誰かに<strong style="color: #027368;">手を振っています</strong>)</li>
+        </ul>
+        <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
+            <strong><span style="color: #027368;">ポイント！</span></strong> 現在進行形 <code style="background-color: #fff;">am/is/are + 〜ing</code> は、<strong style="color: #027368;">「今まさに〜している」</strong>という動作や状況を表すときに使います。写真のように、その瞬間の出来事を描写するのにぴったりですね！✨
+        </p>
+    </div>
 
-<div class="problem-explanation">
-    <h4 style="color: #4429A6; border-bottom: 2px solid #027368; padding-bottom: 5px;">1.3 Write questions (Present Continuous) ❓</h4>
-    <p>ここでは、与えられた状況とヒントの単語を使って、<strong style="color: #027368;">現在進行形の疑問文</strong>を作る練習だよ。「(疑問詞 +) am/is/are + 主語 + -ing形?」の形を思い出そう！</p>
-    <ul style="list-style-type: none; padding-left: 20px;">
-        <li><span style="color: #D98E32;">👉</span> 1. What's all that noise? (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">what / happen?</code>) <br/> ⇒ <span class="answer-highlight">What's happening?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 2. What's the matter? (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">why / you / cry?</code>) <br/> ⇒ <span class="answer-highlight">Why are you crying?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 3. Where's your mother? (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">she / work / today?</code>) <br/> ⇒ <span class="answer-highlight">Is she working today?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 4. I haven't seen you for ages. (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">what / you / do / these days?</code>) <br/> ⇒ <span class="answer-highlight">What are you doing these days?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 5. Amy is a student. (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">what / she / study?</code>) <br/> ⇒ <span class="answer-highlight">What's she studying? / What is she studying?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 6. Who are those people? (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">what / they / do?</code>) <br/> ⇒ <span class="answer-highlight">What are they doing?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 7. I heard you started a new job. (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">you / enjoy / it?</code>) <br/> ⇒ <span class="answer-highlight">Are you enjoying it?</span></li>
-        <li><span style="color: #D98E32;">👉</span> 8. We're not in a hurry. (<code style="display: inline-block; background-color: #f5f5f5; padding: 2px 5px; border-radius: 4px; border: 1px solid #eee;">why / you / walk / so fast?</code>) <br/> ⇒ <span class="answer-highlight">Why are you walking so fast?</span></li>
-    </ul>
-</div>
+    <div class="problem-explanation">
+        <h3><span style="color: #4429A6; margin-right: 5px;">🔗</span>1.2 文と文をつなげよう！</h3>
+        <p>左側の文 (1-8) と、それに続く自然な文を右側 (a-h) から選んで組み合わせる問題です。文脈に合うペアを見つけましょう。🤔</p>
 
-<div class="problem-explanation">
-    <h4 style="color: #4429A6; border-bottom: 2px solid #027368; padding-bottom: 5px;">1.4 Put the verb into the correct form (Present Continuous +/-) 👍👎</h4>
-    <p>最後のセクション！文脈に合わせて、動詞を<strong style="color: #027368;">現在進行形の肯定文 (am/is/are + -ing)</strong> または<strong style="color: #D92B04;">否定文 (am not/isn't/aren't + -ing)</strong> にするよ。</p>
-    <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
-        <strong><span style="color: #027368;">ポイント！</span></strong> 文全体の意味をよく読んで、肯定 (している) か否定 (していない) かを判断しよう。「now」「these days」「today」などの時間を示す言葉や、文脈 (例: ラジオを消していい → 聞いていない) がヒントになるよ！
-    </p>
-    <ul style="list-style-type: none; padding-left: 20px;">
-        <li><span style="color: #027368;">●</span> 1. Please don't make so much noise. <span class="answer-highlight">I'm trying</span> (I / try) to work. (解答例)</li>
-        <li><span style="color: #027368;">●</span> 2. Let's go out now. <span class="answer-highlight">It isn't raining</span> (it / rain / negative) any more. (解答例)</li>
-        <li><span style="color: #027368;">●</span> 3. You can turn off the radio. <span class="answer-highlight">I'm not listening</span> (I / listen / negative) to it.</li>
-        <li><span style="color: #027368;">●</span> 4. Kate phoned last night. She's on holiday with friends. <span class="answer-highlight">She's having</span> (She / have) a great time and doesn't want to come back.</li>
-        <li><span style="color: #027368;">●</span> 5. Andrew started evening classes recently. <span class="answer-highlight">He's learning</span> (He / learn) Japanese.</li>
-        <li><span style="color: #027368;">●</span> 6. Paul and Sarah have had an argument and now <span class="answer-highlight">they aren't speaking</span> (they / speak / negative) to one another.</li>
-        <li><span style="color: #027368;">●</span> 7. The situation is already very bad and now <span class="answer-highlight">it's getting</span> (it / get) worse.</li>
-        <li><span style="color: #027368;">●</span> 8. Tim <span class="answer-highlight">isn't working</span> (work / negative) today. He's taken the day off.</li>
-        <li><span style="color: #027368;">●</span> 9. <span class="answer-highlight">I'm looking</span> (I / look) for Sophie. Do you know where she is?</li>
-        <li><span style="color: #027368;">●</span> 10. The washing machine has been repaired. <span class="answer-highlight">It's working</span> (It / work) now.</li>
-        <li><span style="color: #027368;">●</span> 11. <span class="answer-highlight">They're building</span> (They / build) a new hospital. It will be finished next year.</li>
-        <li><span style="color: #027368;">●</span> 12. Ben is a student, but he's not very happy. <span class="answer-highlight">He isn't enjoying</span> (He / enjoy / negative) his course.</li>
-        <li><span style="color: #027368;">●</span> 13. I think it's going to rain. <span class="answer-highlight">The weather is changing</span> (The weather / change). Look at those clouds.</li>
-        <li><span style="color: #027368;">●</span> 14. Dan has been in the same job for a long time. <span class="answer-highlight">He's starting</span> (He / start) to get bored with it.</li>
-    </ul>
-</div>
+        <h4>✅ 答えの組み合わせ</h4>
+        <table style="border-collapse: collapse; width: auto; margin-top: 15px; margin-bottom: 15px;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #ccc; padding: 8px 12px; background-color: #f8f8f8; text-align: center; font-weight: bold;">左の文 (理由など)</th>
+                    <th style="border: 1px solid #ccc; padding: 8px 12px; background-color: #f8f8f8; text-align: center; font-weight: bold;">右の文 (結果・説明など)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">1. Please don't make so much noise. (そんなに騒がないでください。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">f. I'm trying to work.</span> (仕事をしようとしているんです。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">2. We need to leave soon. (私たちはすぐに出発する必要があります。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">e. It's getting late.</span> (遅くなってきています。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">3. I don't have anywhere to live right now. (今、住むところがありません。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">g. I'm staying with friends.</span> (友達のところに滞在しています。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">4. I need to eat something soon. (すぐに何か食べる必要があります。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">a. I'm getting hungry.</span> (お腹が空いてきました。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">5. They don't need their car any more. (彼らはもう車を必要としていません。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">d. They're trying to sell it.</span> (彼らはそれを売ろうとしています。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">6. Things are not so good at work. (仕事の状況があまり良くありません。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">h. The company is losing money.</span> (会社は赤字です。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">7. It isn't true what they say. (彼らが言っていることは真実ではありません。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">b. They're lying.</span> (彼らは嘘をついています。)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;">8. We're going to get wet. (私たちは濡れるでしょう。)</td>
+                    <td style="border: 1px solid #ccc; padding: 8px 12px; text-align: center;"><span class="answer-highlight">c. It's starting to rain.</span> (雨が降り始めています。)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
+            <strong><span style="color: #027368;">ポイント！</span></strong> 文と文の<strong style="color: #027368;">意味のつながり</strong>を考えるのがコツです。「なぜそうなのか？」という理由や、「その結果どうなるか？」という関係性を見つけると分かりやすいですよ。👍
+        </p>
+    </div>
 
-<p style="margin-top: 30px;">これで Unit 1 のエクササイズの解説は終わりだよ！現在進行形の使い方が掴めてきたかな？ 分からないところがあったら、いつでも聞いてね！ 🎉</p>
+    <div class="problem-explanation">
+        <h3><span style="color: #4429A6; margin-right: 5px;">❓</span>1.3 質問を作ろう！ (現在進行形の疑問文)</h3>
+        <p>与えられた単語を使って、<strong style="color: #027368;">現在進行形の疑問文</strong>を作る練習です。文脈に合う自然な質問を考えましょう。</p>
+
+        <h4>疑問文の作り方 基本ルール 📐</h4>
+        <p><code style="background-color: #fff;">疑問詞 (What, Why など) + be動詞 (am/is/are) + 主語 + 動詞のing形 ... ?</code></p>
+
+        <h4>✅ 答えとポイント</h4>
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li><span style="color: #027368;">1.</span> What's all that noise? <span class="answer-highlight">What's happening?</span> / <span class="answer-highlight">What is happening?</span> (何が<strong style="color: #027368;">起こっている</strong>の？) <span style="color: #757575;">← (what / happen?)</span></li>
+            <li><span style="color: #027368;">2.</span> What's the matter? <span class="answer-highlight">Why are you crying?</span> (なぜ<strong style="color: #027368;">泣いている</strong>の？) <span style="color: #757575;">← (why / you / cry?)</span></li>
+            <li><span style="color: #027368;">3.</span> Where's your mother? <span class="answer-highlight">Is she working today?</span> (彼女は今日<strong style="color: #027368;">働いています</strong>か？) <span style="color: #757575;">← (she / work / today?) ※Yes/No疑問文</span></li>
+            <li><span style="color: #027368;">4.</span> I haven't seen you for ages. <span class="answer-highlight">What are you doing these days?</span> (最近は何を<strong style="color: #027368;">しています</strong>か？) <span style="color: #757575;">← (what / you / do / these days?)</span></li>
+            <li><span style="color: #027368;">5.</span> Amy is a student. <span class="answer-highlight">What is she studying?</span> / <span class="answer-highlight">What's she studying?</span> (彼女は何を<strong style="color: #027368;">勉強しています</strong>か？) <span style="color: #757575;">← (what / she / study?)</span></li>
+            <li><span style="color: #027368;">6.</span> Who are those people? <span class="answer-highlight">What are they doing?</span> (彼らは何を<strong style="color: #027368;">しています</strong>か？) <span style="color: #757575;">← (what / they / do?)</span></li>
+            <li><span style="color: #027368;">7.</span> I heard you started a new job. <span class="answer-highlight">Are you enjoying it?</span> (それを<strong style="color: #027368;">楽しんでいます</strong>か？) <span style="color: #757575;">← (you / enjoy / it?) ※Yes/No疑問文</span></li>
+            <li><span style="color: #027368;">8.</span> We're not in a hurry. <span class="answer-highlight">Why are you walking so fast?</span> (なぜそんなに速く<strong style="color: #027368;">歩いている</strong>のですか？) <span style="color: #757575;">← (why / you / walk / so fast?)</span></li>
+        </ul>
+        <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
+            <strong><span style="color: #027368;">ポイント！</span></strong> 疑問詞がない場合 (3番や7番) は、<code style="background-color: #fff;">be動詞 + 主語 + 動詞のing形...?</code> の語順になります (Yes/Noで答えられる質問)。主語に合わせて <code style="background-color: #fff;">am/is/are</code> を使い分けるのを忘れずに！💡
+        </p>
+    </div>
+
+    <div class="problem-explanation">
+        <h3><span style="color: #4429A6; margin-right: 5px;">✍️</span>1.4 正しい形に直そう！ (現在進行形 - 肯定/否定)</h3>
+        <p>カッコ内の動詞を、文脈に合わせて<strong style="color: #027368;">現在進行形の肯定文 (<code style="background-color: #fff;">I'm doing</code> など)</strong> または<strong style="color: #027368;">否定文 (<code style="background-color: #fff;">I'm not doing</code> など)</strong> に変える問題です。「今」のことや「一時的な状況」を表しているかどうかが判断のポイントです。</p>
+
+        <h4>✅ 答えとポイント</h4>
+        <ul style="list-style-type: none; padding-left: 20px;">
+             <li><span style="color: #027368;">1.</span> Please don't make so much noise. <span class="answer-highlight">I'm trying</span> (I / try) to work. (静かにして。仕事を<strong style="color: #027368;">しようとしている</strong>んだ。) ⇒ <strong style="color: #027368;">今まさに</strong>トライしている状況なので肯定形。</li>
+             <li><span style="color: #027368;">2.</span> Let's go out now. <span class="answer-highlight">It isn't raining</span> / <span class="answer-highlight">It's not raining</span> (it / rain) any more. (さあ、出かけよう。もう雨は<strong style="color: #027368;">降っていない</strong>よ。) ⇒ <strong style="color: #027368;">今の状況</strong>として雨が止んだことを表すため否定形。</li>
+             <li><span style="color: #027368;">3.</span> You can turn off the radio. <span class="answer-highlight">I'm not listening</span> (I / listen) to it. (ラジオを消してもいいよ。<strong style="color: #027368;">聞いていない</strong>から。) ⇒ <strong style="color: #027368;">今の状態</strong>として聞いていないことを伝えるため否定形。</li>
+             <li><span style="color: #027368;">4.</span> Kate phoned last night. She's on holiday with friends. <span class="answer-highlight">She's having</span> (She / have) a great time and doesn't want to come back. (ケイトは昨晩電話してきたよ。友達と休暇中なんだ。<strong style="color: #027368;">素晴らしい時間を過ごしている</strong>みたいで、帰りたくないんだって。) ⇒ 休暇中という<strong style="color: #027368;">一時的な期間</strong>に楽しんでいる状況なので肯定形。</li>
+             <li><span style="color: #027368;">5.</span> Andrew started evening classes recently. <span class="answer-highlight">He's learning</span> (He / learn) Japanese. (アンドリューは最近夜間クラスを始めた。彼は日本語を<strong style="color: #027368;">学んでいる</strong>んだ。) ⇒ 最近始めたという<strong style="color: #027368;">継続中の活動</strong>を表すため肯定形。</li>
+             <li><span style="color: #027368;">6.</span> Paul and Sarah have had an argument and now <span class="answer-highlight">they aren't speaking</span> / <span class="answer-highlight">they're not speaking</span> (they / speak) to one another. (ポールとサラは口論をして、今お互いに<strong style="color: #027368;">口をきいていない</strong>。) ⇒ 口論の結果として<strong style="color: #027368;">現在続いている状態</strong>を表すため否定形。</li>
+             <li><span style="color: #027368;">7.</span> The situation is already very bad and now <span class="answer-highlight">it's getting</span> (it / get) worse. (状況はすでに非常に悪いが、さらに<strong style="color: #027368;">悪化してきている</strong>。) ⇒ 状況が<strong style="color: #027368;">変化している途中</strong>であることを示すため肯定形 (`get worse` = 悪化する)。</li>
+             <li><span style="color: #027368;">8.</span> Tim <span class="answer-highlight">isn't working</span> / <span class="answer-highlight">is not working</span> (work) today. He's taken the day off. (ティムは今日<strong style="color: #027368;">働いていない</strong>。休みを取ったんだ。) ⇒ 「今日」という<strong style="color: #027368;">限定された期間</strong>の状況を表すため否定形。</li>
+             <li><span style="color: #027368;">9.</span> <span class="answer-highlight">I'm looking</span> (I / look) for Sophie. Do you know where she is? (ソフィーを<strong style="color: #027368;">探している</strong>んだけど、どこにいるか知らない？) ⇒ <strong style="color: #027368;">今まさに</strong>探している最中なので肯定形。</li>
+             <li><span style="color: #027368;">10.</span> The washing machine has been repaired. <span class="answer-highlight">It's working</span> (It / work) now. (洗濯機は修理されたよ。<strong style="color: #027368;">今は動いている</strong>。) ⇒ 修理の結果、<strong style="color: #027368;">現在の状態</strong>として機能していることを示すため肯定形。</li>
+             <li><span style="color: #027368;">11.</span> <span class="answer-highlight">They're building</span> (They / build) a new hospital. It will be finished next year. (彼らは新しい病院を<strong style="color: #027368;">建設中</strong>だ。来年完成予定だ。) ⇒ 来年まで続く<strong style="color: #027368;">進行中のプロジェクト</strong>を表すため肯定形。</li>
+             <li><span style="color: #027368;">12.</span> Ben is a student, but he's not very happy. <span class="answer-highlight">He isn't enjoying</span> / <span class="answer-highlight">He's not enjoying</span> (He / enjoy) his course. (ベンは学生だが、あまり満足していない。彼はコースを<strong style="color: #027368;">楽しんでいない</strong>。) ⇒ <strong style="color: #027368;">現在の気持ちや状態</strong>を表すため否定形。</li>
+             <li><span style="color: #027368;">13.</span> <span class="answer-highlight">The weather's changing</span> / <span class="answer-highlight">The weather is changing</span> (The weather / change). Look at those clouds. I think it's going to rain. (天気が<strong style="color: #027368;">変わってきている</strong>。あの雲を見て。雨が降りそうだ。) ⇒ 空模様が<strong style="color: #027368;">変化している最中</strong>であることを示すため肯定形。</li>
+             <li><span style="color: #027368;">14.</span> Dan has been in the same job for a long time. <span class="answer-highlight">He's starting</span> (He / start) to get bored with it. (ダンは長い間同じ仕事をしている。彼はそれに<strong style="color: #027368;">飽き始めている</strong>。) ⇒ 飽きるという<strong style="color: #027368;">変化が始まっている</strong>ことを示すため肯定形 (`start to 〜` = 〜し始める)。</li>
+        </ul>
+
+        <p style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 6px solid #027368; margin-top: 15px; margin-bottom: 15px;">
+            <strong><span style="color: #027368;">ポイント！</span></strong> 現在進行形は、<strong style="color: #027368;">「今」や「一時的な期間」</strong>の動作や状況、<strong style="color: #027368;">「変化の途中」</strong>を表すのに使われます。文全体の意味や、<code class="keyword">now</code>, <code class="keyword">these days</code>, <code class="keyword">today</code> などの時間を示す言葉に注目すると、肯定か否定か、現在進行形を使うべきかどうかが判断しやすくなりますよ！🎉
+        </p>
+    </div>
 
 </body>
 </html>
